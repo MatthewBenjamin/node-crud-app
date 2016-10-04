@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Are you sure you want to delete the post from #{post.name} ? #{post._id}
+  form#formDeletePost(name="deletepost",method="post",action="/posts/#{post._id}/delete")
+    button#btnSubmit(type="submit") DELETE
+    br
+    br
+    a(href="/posts") CANCEL

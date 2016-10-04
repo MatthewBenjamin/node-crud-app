@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  a(href="/posts/newpost") make a new post
+  ul
+    each post, p in posts
+      li
+        h2 #{post.name}
+        p #{post.content}
+        p id: #{post._id}
+        a(href="/posts/#{post._id}/delete") delete
+        br
+        a(href="/posts/#{post._id}/edit") edit

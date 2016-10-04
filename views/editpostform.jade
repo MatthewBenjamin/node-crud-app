@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  form#formEditPost(name="editpost",method="post",action="/posts/#{post._id}/edit")
+    input#inputName(type="text",value="#{post.name}",name="name")
+    br
+    textarea#inputContent(name="content") #{post.content}
+    br
+    br
+    button#btnSubmit(type="submit") EDIT
+    br
+    br
+    a(href="/posts") cancel
