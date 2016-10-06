@@ -16,23 +16,6 @@ router.get('/', function(req, res) {
     })
 });
 
-router.get('/newpost', function(req, res) {
-    res.render('newpostform', {title: 'Make a New Post'});
-});
-
-router.post('/newpost', function(req, res) {
-    var collection = db.get('posts');
-    collection.insert({
-        name: req.body.name,
-        content: req.body.content
-    }, function(err, post) {
-        if (err) {
-            throw err;
-        }
-        res.redirect('/posts');
-    });
-});
-
 router.get('/:id/delete', function(req, res) {
     var collection = db.get('posts');
     collection.findOne({_id: req.params.id}, function(err, post) {

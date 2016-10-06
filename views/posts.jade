@@ -6,9 +6,9 @@ block content
   ul
     each post, p in posts
       li
-        h2 #{post.name}
-        p #{post.content}
-        p id: #{post._id}
+        h2 from: #{post.name}
+        p content: #{post.content}
+        p _id: #{post._id}
         a(href="/posts/#{post._id}/delete") delete
         br
         a(href="/posts/#{post._id}/edit") edit
