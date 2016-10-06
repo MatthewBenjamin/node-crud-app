@@ -1,31 +1,35 @@
 # node-crud-app
 
+Live Link: [node-crud-app.herokuapp.com](https://node-crud-app.herokuapp.com)
+
 ## info
   This app is a simple full stack CRUD app built with node.js, Express, and
   mongoDB. It allows anyone to post, edit, and delete any message on the main
   page. At the moment, there is no user authorization or validation for form
   inputs.
 
-## requirements
+## local deployment
+### requirements
+
   [node.js](https://nodejs.org)
 
   [mongoDB](https://www.mongodb.com)
 
   [npm](https://www.npmjs.com)
 
-## deployment to locahost
+### procedure
 1. After downloading, create a folder named 'data' in the main project
 directory.
 
-  ```
-  mkdir [path-to-project-directory]/data
-  ```
+   ```
+   mkdir [path-to-project-directory]/data
+   ```
 
 2. Still in main project folder, run:
 
-  ```
-  npm install
-  ```
+   ```
+   npm install
+   ```
 
 3. Setup MongoDB for 'localhost:27017/node-crud-app', start your mongo server:
 
