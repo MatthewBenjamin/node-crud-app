@@ -2,7 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Are you sure you want to delete the post from #{post.name} ? #{post._id}
+  p Are you sure you want to delete the following post from #{post.name} ?
+  p #{post.content}
   form#formDeletePost(name="deletepost",method="post",action="/posts/#{post._id}/delete")
     button#btnSubmit(type="submit") delete
     a(href="/posts") cancel
