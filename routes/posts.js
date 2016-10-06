@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
         res.render('posts', {
             'posts': posts
         });
-    })
+    });
 });
 
 router.get('/:id/delete', function(req, res) {
@@ -28,7 +28,6 @@ router.get('/:id/delete', function(req, res) {
 
 router.post('/:id/delete', function(req, res) {
     var collection =db.get('posts');
-    console.log('deleting post...', req.params.id)
     collection.remove({ _id: req.params.id }, function(err, post) {
         if (err) {
             throw err;
@@ -44,8 +43,8 @@ router.get('/:id/edit', function(req, res) {
             throw err;
         }
         res.render('editpostform', { post: post });
-    })
-})
+    });
+});
 
 router.post('/:id/edit', function(req, res) {
     var collection = db.get('posts');
