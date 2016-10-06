@@ -28,13 +28,11 @@ router.get('/:id/delete', function(req, res) {
 
 router.post('/:id/delete', function(req, res) {
     var collection =db.get('posts');
-    //console.log('delete post: ', req.params.id)
     console.log('deleting post...', req.params.id)
     collection.remove({ _id: req.params.id }, function(err, post) {
         if (err) {
             throw err;
         }
-        //console(post, 'deleted');
         res.redirect('/posts');
     });
 });
