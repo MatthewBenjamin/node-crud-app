@@ -34,7 +34,7 @@ directory.
 3. Setup MongoDB for 'localhost:27017/node-crud-app', start your mongo server:
 
    ```
-   mongod --dbpath ~/[path-to-project-directory]/data
+   mongod --dbpath [path-to-project-directory]/data
    ```
 
    meanwhile, in the mongo console, enter:
